@@ -145,24 +145,6 @@ Training parameters:
 - `lambda_cross_view`: The weight of cross-view consistency loss.
 - `wandb_log`: Whether to use wandb log.
 
-### Prepare your own dataset
-
-We follow the dataset format of EG3D [here](https://github.com/NVlabs/eg3d#preparing-datasets). You can obtain the segmentation masks of your own dataset by [DINO clustering](https://github.com/ShirAmir/dino-vit-features/blob/main/part_cosegmentation.py), and obtain the edge map by [pidinet](https://github.com/hellozhuo/pidinet) and [informative drawing](https://github.com/carolineec/informative-drawings).
-
----
-
-## Citation
-
-If you find this repository useful for your research, please cite the following work.
-```
-@inproceedings{kangle2023pix2pix3d,
-  title={3D-aware Conditional Image Synthesis},
-  author={Deng, Kangle and Yang, Gengshan and Ramanan, Deva and Zhu, Jun-Yan},
-  booktitle = {CVPR},
-  year = {2023}
-}
-```
-
 ---
 
 ## Acknowledgments
