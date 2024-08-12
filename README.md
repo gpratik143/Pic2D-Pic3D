@@ -144,9 +144,3 @@ Training parameters:
 - `lambda_lpips`: The weight of RGB LPIPS loss.
 - `lambda_cross_view`: The weight of cross-view consistency loss.
 - `wandb_log`: Whether to use wandb log.
-
----
-
-## Acknowledgments
-We thank Sheng-Yu Wang, Nupur Kumari, Gaurav Parmer, Ruihan Gao, Muyang Li, George Cazenavette, Andrew Song, Zhipeng Bao, Tamaki Kojima, Krishna Wadhwani, Takuya Narihira, and Tatsuo Fujiwara for their discussion and help. We are grateful for the support from Sony Corporation, Singapore DSTA, and the CMU Argo AI Center for Autonomous Vehicle Research.
-This codebase borrows heavily from [EG3D](https://github.com/NVlabs/eg3d) and [StyleNeRF](https://github.com/facebookresearch/StyleNeRF). 
