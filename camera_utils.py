@@ -6,22 +6,6 @@ import torch.nn as nn
 from training.volumetric_rendering import math_utils
 
 class GaussianCameraPoseSampler:
-    """
-    Samples pitch and yaw from a Gaussian distribution and returns a camera pose.
-    Camera is specified as looking at the origin.
-    If horizontal and vertical stddev (specified in radians) are zero, gives a
-    deterministic camera pose with yaw=horizontal_mean, pitch=vertical_mean.
-    The coordinate system is specified with y-up, z-forward, x-left.
-    Horizontal mean is the azimuthal angle (rotation around y axis) in radians,
-    vertical mean is the polar angle (angle from the y axis) in radians.
-    A point along the z-axis has azimuthal_angle=0, polar_angle=pi/2.
-
-    Example:
-    For a camera pose looking at the origin with the camera at position [0, 0, 1]:
-    cam2world = GaussianCameraPoseSampler.sample(math.pi/2, math.pi/2, radius=1)
-    """
-
-    @staticmethod
     def sample(horizontal_mean, vertical_mean, horizontal_stddev=0, vertical_stddev=0, radius=1, batch_size=1, device='cpu'):
         h = torch.randn((batch_size, 1), device=device) * horizontal_stddev + horizontal_mean
         v = torch.randn((batch_size, 1), device=device) * vertical_stddev + vertical_mean
